@@ -4,7 +4,7 @@ import telebot
 import time
 import re
 
-TOKEN = "your token"
+TOKEN = "YOUR TOKEN"
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -14,11 +14,11 @@ def all_command(message):
 
     time.sleep(1)
     bot.send_message(message.chat.id, 
-                    text="I can recognize text from img. It works not perfect 😁")
+                    text="I'm able to recognize text from img. It works not perfect 😁")
     
     time.sleep(1)
     bot.send_message(message.chat.id, 
-                    text="To get text send my some image (not file!) as a photo.")
+                    text="To get text send me some image (not file!) as a photo.")
 
     time.sleep(2)
     bot.send_message(
@@ -47,7 +47,7 @@ def photo_id(message):
     if re.search("^\s", img_data):
         bot.send_message(
             message.chat.id, 
-            text="I can't any text here, sorry((  😞\n\n" + 
+            text="I can't find any text here, sorry 😞\n\n" + 
             "ADVISE: try to send img with higher quality and plain background 🙃"
             )
     else:
@@ -64,6 +64,7 @@ def photo_id(message):
 
 
 @bot.message_handler(func=lambda message: True)
+
 
 def chating(message):
     bot.send_message(message.chat.id, text="Sorry, I'm not able to chat 😞")
