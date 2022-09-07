@@ -29,10 +29,12 @@ def all_command(message):
 @bot.message_handler(content_types=['photo'])
 def photo_id(message):
     bot.send_message(message.chat.id, text="Working on it...")
-    # There are 3 elements in 'message.photo' array. 
-    # The last one holds data with the highest file resolution, 
-    # what is very important for realy goog img to text recognition (is corresponds to tessaract)
-    # that's why we write down last element (photo[-1]) of this array
+    """
+    There are 3 elements in 'message.photo' array. 
+    The last one holds data with the highest file resolution, what is 
+    very important for really goog img to text recognition (is corresponds to tessaract)
+    that's why we use the last element (photo[-1]) of this array
+    """
     fileID = message.photo[-1].file_id
 
     # bot.get_file method prepares file for downlonding under the hood
@@ -60,7 +62,7 @@ def photo_id(message):
     time.sleep(1)
     
     bot.send_message(message.chat.id, text="Please, send me a photo 🙃\n" +
-    "(use 'send compressed' if proposed)")
+    "(use '☑️ send compressed' if proposed)")
 
 
 @bot.message_handler(func=lambda message: True)
