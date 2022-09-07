@@ -2,13 +2,13 @@
 
 # Description:
 
-This small 'script' that launches telegram bot. This bot can get an image and recognize the text on it.
+This is small 'script' that launches telegram bot. This bot can get an image and recognize the text on it.
 
-# How to use:
+# How to use on the telegram:
 
-1. Press start
-2. Send image
-3. Bot will reply to you with result (will send text from the img)
+1. Press ```start``` button
+2. Send an image to the bot
+3. It will reply to you with the result
 
 # How to run
 
@@ -26,7 +26,7 @@ This small 'script' that launches telegram bot. This bot can get an image and re
  - in terminal you'll see logs of your bot
  - in Telegramm find your bot with @botname and start it
 
-# If you forget smth:
+# If you forgot smth:
 
  - @BotFather - official TG bot, that helps you to create/control/set/delete/see_info_about any of your TG bot
 
